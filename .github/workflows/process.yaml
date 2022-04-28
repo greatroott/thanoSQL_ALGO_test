@@ -17,4 +17,3 @@ jobs:
           git fetch --prune
           echo "## Validating results" 
           dvc metrics diff --show-md titanic-test >> report.md
-          cml-send-comment report.md --rm-watermark
