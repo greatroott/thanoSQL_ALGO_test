@@ -1,6 +1,6 @@
 stages:
   process:
-    cmd: python proccess_data.py
+    cmd: python process_data.py
     deps:
     - process_data.py
   train:
