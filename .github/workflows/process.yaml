@@ -20,7 +20,6 @@ jobs:
           dvc repro -f
 
           git fetch --prune
-
-          dvc metrics diff --show-md "titanic-test" >> report.md
-          echo "## Validating results" >> report.md
-          cml send-comment report.md
+          echo "## Validating results" 
+          dvc metrics diff --show-md titanic-test >> report.md
+          cml-send-comment report.md
