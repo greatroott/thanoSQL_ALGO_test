@@ -1,9 +1,7 @@
 name: dvc-test
 on:
   push:
-  pull_request:
-    branches:
-      - main
+
 
 jobs:
   run:
