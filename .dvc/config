@@ -1,0 +1,4 @@
+[core]
+    remote = data
+['remote "data"']
+    url = C:\Users\sk370\Desktop\thanoSQL_ALGO_test\dvc-remote
