@@ -10,3 +10,13 @@ stages:
     - path: report_eda.html
       md5: af542bafafffd49ce7e59d1ac17c44d4
       size: 937165
+  train:
+    cmd: python train.py
+    deps:
+    - path: train.py
+      md5: 8396e6aba82ae69c9314b57d8189766c
+      size: 605
+    outs:
+    - path: metrics.json
+      md5: eebabc189696d4f8b52b6e08acc027a5
+      size: 220
