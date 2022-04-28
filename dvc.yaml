@@ -1,0 +1,12 @@
+stages:
+  process:
+    cmd: python proccess_data.py
+    deps:
+    - process_data.py
+  train:
+    cmd: python train.py
+    deps:
+    - train.py
+    metrics:
+    - metrics.json:
+        cache: false
