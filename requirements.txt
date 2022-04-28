@@ -1,0 +1,3 @@
+sweetviz
+pandas
+autogluon
