@@ -12,14 +12,14 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
       - uses: iterative/setup-cml@v1
-      - name: cml_run
+      - name: train_model
         env:
           repo_token: ${{ secrets.GITHUB_TOKEN }} 
         run: |
           pip install --upgrade pip
           pip install -r requirements.txt
           dvc repro -f
-
+          echo "end reproduction"
           git fetch --prune
           echo "## Validating results" >> report.md
           dvc metrics diff --show-md titanic-test >> report.md
