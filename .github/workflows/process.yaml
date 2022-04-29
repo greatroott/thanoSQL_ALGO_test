@@ -15,8 +15,8 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
 
-          # Pull data & run-cache from S3 and reproduce pipeline
-          dvc pull data
+          # Pull data 
+          dvc pull data -f
           dvc repro -f
           
           # Report metrics 
