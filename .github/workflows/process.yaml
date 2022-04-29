@@ -10,7 +10,7 @@ jobs:
     container: docker://dvcorg/cml-py3:latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
       - uses: iterative/setup-cml@v1
       - name: cml_run
         env:
@@ -21,6 +21,6 @@ jobs:
           dvc repro -f
 
           git fetch --prune
-          echo "## Validating results" 
+          echo "## Validating results" >> report.md
           dvc metrics diff --show-md titanic-test >> report.md
           cml-send-comment report.md 
