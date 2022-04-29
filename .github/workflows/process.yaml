@@ -15,8 +15,7 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
 
-          # Pull data 
-          dvc pull data -f
+          # Reproduction of the Pipeline  
           dvc repro -f
           
           # Report metrics 
