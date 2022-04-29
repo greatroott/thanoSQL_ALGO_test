@@ -1,5 +1,9 @@
 name: dvc-test
-on: [push]
+on: 
+  push:
+  pull_request:
+    branches:
+      - titanic-test
 jobs:
   run:
     runs-on: [ubuntu-latest]
@@ -17,3 +21,4 @@ jobs:
           git fetch --prune
           echo "## Validating results" 
           dvc metrics diff --show-md titanic-test >> report.md
+          cml-send-comment report.md 
